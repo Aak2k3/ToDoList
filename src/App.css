@@ -21,20 +21,20 @@
 }
 
 .to-do{
-  flex-grow: 5;
+  width: 80%;
   border: solid 2px black;
   padding: 20px;
 }
 
 .completed{
-  flex-grow: 0.5;
+  width: 10%;
   border: solid 2px black;
   padding: 10px;
   align-content: center;
 }
 
 .del{
-  flex-grow: 1;
+  width: 10%;
   border: solid 2px black;
   padding: 10px;
   align-content: center;
@@ -63,4 +63,57 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.inputText{
+  display: flex;
+  justify-content: space-around;
+  width: 70vw;
+  text-align: center;
+  align-self: center;
+  margin: 0 auto;
+  
+  border-bottom: dotted 1px black;
+  background-color: rgb(208, 255, 183);
+  font-size: x-large;
+  font-family:'Comic Neue', sans-serif;
+  font-weight: 700;
+}
+
+.A{
+  width: 80%;
+  border: solid 2px black;
+  padding: 20px;
+}
+
+.B{
+  width: 10%;
+  border: solid 2px black;
+  padding: 10px;
+}
+
+.C{
+  width: 10%;
+  border: solid 2px black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.delete:hover{
+  scale: 1.5;
+  transition-duration: 0.3s;
+}
+
+.edit:hover{
+  scale: 1.5;
+  transition-duration: 0.3s;
+}
+
+.checkbox{
+  
+  height: 20px;
+  width: 40px;
+  cursor: pointer;
+  
 }
