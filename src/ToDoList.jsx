@@ -4,11 +4,20 @@ import ToDoItem from "./ToDoItem";
 function ToDoList(){
     const [inputVal, setInputVal] = useState('');
     const [todoItems, setTodoItems] = useState([]);
-
+    const [editCon, setEditCon] = useState(false);
+    const [editIndex, setEditIndex] = useState(null);
     
 
+
     function add(){
-        if (inputVal.trim() !== "") {
+        if(editCon == true){
+            let editedArray = [...todoItems];
+            editedArray[editIndex] = inputVal;
+            setTodoItems(editedArray);
+            setEditIndex(null);
+            setInputVal(''); ;
+            setEditCon(false);
+        }else if (inputVal.trim() !== "") {
             setTodoItems([...todoItems, inputVal]);  
             setInputVal(''); 
         }
@@ -22,6 +31,12 @@ function ToDoList(){
     function deleteField(index) {
         const updatedItems = todoItems.filter((item, id) => id !== index); 
         setTodoItems(updatedItems); 
+    }
+
+    function editField(index){
+        setEditCon(true);
+        setInputVal(todoItems[index]);
+        setEditIndex(index);
     }
 
     return(
@@ -40,7 +55,7 @@ function ToDoList(){
         <div>
         {
                 todoItems.map((item, index)=>(
-                    <ToDoItem key={index} text={item} deleteButton={() => deleteField(index)} />
+                    <ToDoItem key={index} text={item} deleteButton={() => deleteField(index)} editButton={() => editField(index)} />
                 ))
             }
         </div>
