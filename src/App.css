@@ -10,6 +10,7 @@
   color: rgb(4, 166, 61);
   background-color: aliceblue;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 2px 2px 2px  rgb(0, 0, 0), -2px -2px 2px  rgb(0, 0, 0);
 }
 
 .table{
@@ -100,7 +101,7 @@
 }
 
 .inputText:hover{
-  scale: 1.1;
+  scale: 1.03;
   transition-duration: 0.3s;
 }
 
